@@ -25,21 +25,21 @@ const Footer = ({ isDarkMode }) => {
         <p>2025 Dharma Bandaru. All rights reserved</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
-            <a target="_blank" href="https://google.com">
-              Link
+            <a target="_blank" href="https://www.strava.com/athletes/115321488">
+              Strava
             </a>{' '}
           </li>
-          <li>
+          {/* <li>
             <a target="_blank" href="https://x.com">
               Link
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             {' '}
             <a target="_blank" href="https://youtube.com">
               Link
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
