@@ -1,5 +1,6 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
@@ -35,15 +36,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         : ''
     }`}
       >
-        <a href="top">
+        <Link href="/">
           <Image
             src={isDarkMode ? assets.dharma_logo : assets.dharma_logo}
-            alt=""
-            className="w-28
-
-            cursor-pointer mr-14"
+            alt="Logo"
+            className="w-28 mr-14 cursor-pointer"
           />
-        </a>
+        </Link>
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
             ${
@@ -59,19 +58,20 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Home
             </a>
           </li>
-          <li>
-            <a className="font-Ovo" href="#about">
-              About me
-            </a>
-          </li>
-          <li>
+
+          {/* <li>
             <a className="font-Ovo" href="#services">
               Services{' '}
             </a>
-          </li>
+          </li> */}
           <li>
             <a className="font-Ovo" href="#work">
-              Work{' '}
+              Book Summaries{' '}
+            </a>
+          </li>
+          <li>
+            <a className="font-Ovo" href="#about">
+              Professional Profile
             </a>
           </li>
           <li>

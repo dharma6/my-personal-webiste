@@ -6,6 +6,7 @@ import cloud_ops_icon from './cloud_ops.png';
 import code_icon_dark from './code-icon-dark.png';
 import code_icon from './code-icon.png';
 import confluence_icon from './confluence.png';
+import credly from './credly.png';
 import dev_ops_icon from './dev_ops.png';
 import dharma_logo from './dharma_logo.png';
 import dharma_profile from './dharma_profile.png';
@@ -21,6 +22,7 @@ import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
 import jenkins from './jenkins.png';
 import jira_icon from './jira.png';
+import linkedin from './linkedIn.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
@@ -94,28 +96,34 @@ export const assets = {
   confluence_icon,
   jira_icon,
   sonar_icon,
+  linkedin,
+  credly,
 };
 
 export const workData = [
   {
-    title: 'Frontend project',
-    description: 'Web Design',
-    bgImage: '/work-1.png',
+    title: 'Good To Great',
+    description: 'By Jim Collins',
+    bgImage: '/g2g.png',
+    pdfUrl: '/GoodToGreat.pdf',
   },
   {
-    title: 'Geo based app',
-    description: 'Mobile App',
-    bgImage: '/work-2.png',
+    title: 'Atomic Habits',
+    description: 'By James Clear',
+    bgImage: '/atomic-habits.png',
+    pdfUrl: '/AtomicHabits.pdf',
   },
   {
-    title: 'Photography site',
-    description: 'Web Design',
-    bgImage: '/work-3.png',
+    title: 'Dopamine Nation',
+    description: 'By Anna Lembke',
+    bgImage: '/dopamine-nation.jpg',
+    pdfUrl: '/DopamineNation.pdf',
   },
   {
-    title: 'UI/UX designing',
-    description: 'UI/UX Design',
-    bgImage: '/work-4.png',
+    title: 'Focus and Concentration',
+    description: 'Dr Hubberman podcast',
+    bgImage: '/focus.png',
+    pdfUrl: '/FocusAndConcentration.pdf',
   },
 ];
 

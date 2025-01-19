@@ -10,7 +10,7 @@ const Contact = () => {
     setResult('Sending....');
     const formData = new FormData(event.target);
 
-    formData.append('access_key', '1b589c2a-1f7b-4a25-b1a2-65e97687c7c4');
+    formData.append('access_key', process.env.CONTACT_FORM_API_KEY);
 
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -33,12 +33,11 @@ const Contact = () => {
       className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")]
      bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
     >
-      <h4 className="text-center mb-2 text-lg font-Ovo">Connect with Me</h4>
+      <h4 className="text-center mb-2 text-lg font-Ovo">Connect</h4>
       <h2 className="text-center text-5xl font-Ovo">Stay in touch</h2>
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        I am always looking for new opportunities and challenges. If you have a
-        project you would like to discuss, or if you just want to say hello,
-        feel free to reach out to me. I would love to hear from you.
+        Ideally this form is not needed :) but just left it as it came with
+        template.
       </p>
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
