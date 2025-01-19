@@ -16,13 +16,37 @@ const About = (isDarkMode) => {
           />
         </div>
         <div className="flex-1">
-          <p className="mb-10 max-w-2xl font-Ovo">
-            I am a full-stack developer based in Austin, TX. I have experience
-            in building web applications using Node.js, Express.js, and MongoDB.
-            I am also familiar with React.js and Next.js. I have a passion for
-            building scalable applications and I am always looking for new
-            opportunities to work on exciting projects.
-          </p>
+          <ul className="mb-10 max-w-2xl font-Ovo list-disc pl-5">
+            <li>
+              Based in Austin, TX, and currently enhancing Gen-AI agents in a
+              Retrieval-Augmented Generation (RAG) model.
+            </li>
+            <li>
+              Primarily a backend engineer with expertise in designing,
+              developing, and deploying APIs.
+            </li>
+            <li>
+              Experienced in unit testing to deliver reliable and maintainable
+              solutions.
+            </li>
+            <li>
+              Proficient with AWS services such as Lambda, API Gateway,
+              DynamoDB, Bedrock, Kendra, and S3.
+            </li>
+            <li>
+              Familiar with React.js and Next.js, contributing to UI bug fixes
+              and straightforward feature implementations.
+            </li>
+            <li>
+              Passionate about automating processes with pipelines and CI/CD
+              workflows using tools like Jenkins and GitHub.
+            </li>
+            <li>
+              A strong advocate for security, identifying and addressing
+              vulnerabilities using tools like Prisma and Wiz.
+            </li>
+          </ul>
+
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
@@ -30,11 +54,7 @@ const About = (isDarkMode) => {
                     hover:-translate-y-1 duration-300 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
                 key={index}
               >
-                <Image
-                  src={isDarkMode ? iconDark : icon}
-                  alt={title}
-                  className="w-7 mt-3"
-                />
+                <Image src={icon} alt={title} className="w-7 mt-3" />
                 <h3 className="my-4 font-semobold text-gray-700 dark:text-white">
                   {title}
                 </h3>

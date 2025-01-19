@@ -37,7 +37,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       >
         <a href="top">
           <Image
-            src={isDarkMode ? assets.logo_dark : assets.logo}
+            src={isDarkMode ? assets.dharma_logo : assets.dharma_logo}
             alt=""
             className="w-28
 
