@@ -104,26 +104,26 @@ export const workData = [
   {
     title: 'Good To Great',
     description: 'By Jim Collins',
-    bgImage: '/g2g.png',
-    pdfUrl: '/GoodToGreat.pdf',
+    bgImage: 'g2g.png',
+    pdfUrl: 'GoodToGreat.pdf',
   },
   {
     title: 'Atomic Habits',
     description: 'By James Clear',
-    bgImage: '/atomic-habits.png',
-    pdfUrl: '/AtomicHabits.pdf',
+    bgImage: 'atomic-habits.png',
+    pdfUrl: 'AtomicHabits.pdf',
   },
   {
     title: 'Dopamine Nation',
     description: 'By Anna Lembke',
-    bgImage: '/dopamine-nation.jpg',
-    pdfUrl: '/DopamineNation.pdf',
+    bgImage: 'dopamine-nation.jpg',
+    pdfUrl: 'DopmaineNation.pdf',
   },
   {
     title: 'Focus and Concentration',
     description: 'Dr Hubberman podcast',
-    bgImage: '/focus.png',
-    pdfUrl: '/FocusAndConcentration.pdf',
+    bgImage: 'focus.png',
+    pdfUrl: 'FocusAndConcentration.pdf',
   },
 ];
 

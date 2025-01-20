@@ -109,7 +109,7 @@ const About = (isDarkMode) => {
         </a>
 
         <a
-          href="/Dharma_Bandaru_Resume.pdf"
+          href="Dharma_Bandaru_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white"
