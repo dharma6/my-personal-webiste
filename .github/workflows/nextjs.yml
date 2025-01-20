@@ -32,10 +32,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Set environment variables before the build step
-      - name: Set environment variables
-        run: echo "NEXT_PUBLIC_CONTACT_FORM_API_KEY=${{ secrets.NEXT_PUBLIC_CONTACT_FORM_API_KEY }}" >> $GITHUB_ENV
-
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -79,7 +75,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build --env NEXT_PUBLIC_CONTACT_FORM_API_KEY={{ secrets.NEXT_PUBLIC_CONTACT_FORM_API_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
