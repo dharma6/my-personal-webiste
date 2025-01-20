@@ -22,9 +22,7 @@ const Header = () => {
       </h3>
       <ul className="max-w-2xl mx-auto font-Ovo list-disc list-inside mb-3">
         <li>Share curated summaries of my favorite books.</li>
-        <li>
-          Reflect on my professional journey,experiences and lessons learnt
-        </li>
+        <li>Reflect my profesional journey, projects, and the tools I use.</li>
         <li>And a mix of everything</li>
       </ul>
     </div>
