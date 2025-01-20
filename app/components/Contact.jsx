@@ -37,7 +37,7 @@ const Contact = () => {
       <h2 className="text-center text-5xl font-Ovo">Stay in touch</h2>
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
         Ideally this form is not needed :) but just left it as it came with
-        template.
+        template. It's working though.
       </p>
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
