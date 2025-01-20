@@ -120,6 +120,12 @@ export const workData = [
     pdfUrl: 'DopmaineNation.pdf',
   },
   {
+    title: 'Culture PlayBook',
+    description: 'By Daniel Coyle',
+    bgImage: 'culture-play.png',
+    pdfUrl: 'culturePlayBook.pdf',
+  },
+  {
     title: 'Focus',
     description: 'Dr Hubberman podcast',
     bgImage: 'focus.png',
