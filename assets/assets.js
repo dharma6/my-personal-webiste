@@ -120,7 +120,7 @@ export const workData = [
     pdfUrl: 'DopmaineNation.pdf',
   },
   {
-    title: 'Focus and Concentration',
+    title: 'Focus',
     description: 'Dr Hubberman podcast',
     bgImage: 'focus.png',
     pdfUrl: 'FocusAndConcentration.pdf',

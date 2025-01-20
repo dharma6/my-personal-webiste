@@ -29,11 +29,11 @@ const Footer = ({ isDarkMode }) => {
               Strava
             </a>{' '}
           </li>
-          {/* <li>
-            <a target="_blank" href="https://x.com">
-              Link
+          <li>
+            <a target="_blank" href="https://leetcode.com/u/Dharma_Bandaru/">
+              LeetCode
             </a>
-          </li> */}
+          </li>
           {/* <li>
             {' '}
             <a target="_blank" href="https://youtube.com">
