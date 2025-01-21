@@ -123,7 +123,7 @@ export const workData = [
     title: 'Culture PlayBook',
     description: 'By Daniel Coyle',
     bgImage: 'culture-play.png',
-    pdfUrl: 'culturePlayBook.pdf',
+    pdfUrl: 'CulturePlayBook.pdf',
   },
   {
     title: 'Focus',
