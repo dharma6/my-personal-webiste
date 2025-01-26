@@ -1,7 +1,13 @@
 import { assets, workData } from '@/assets/assets';
 import Image from 'next/image';
 
-const Work = (isDarkMode) => {
+const Work = () => {
+  const handleCardClick = (pdfUrl) => {
+    if (pdfUrl) {
+      window.open(pdfUrl, '_blank');
+    }
+  };
+
   return (
     <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">A page for Books</h4>
@@ -10,18 +16,18 @@ const Work = (isDarkMode) => {
         Out of 10 pick-and-choose books, 5 feel like a second read, 2 compel me
         to write summaries. Here are the summaries, with more to come.
       </p>
-
       <div className="grid grid-cols-auto my-10 gap-5 dark:text-black">
         {workData.map((project, index) => (
           <div
             key={index}
+            onClick={() => handleCardClick(project.pdfUrl)}
             className="aspect-square bg-no-repeat bg-cover bg-center rounded-md
-                relative cursor-pointer group"
+             relative cursor-pointer group"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
             <div
               className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3
-                    px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+               px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
             >
               <div>
                 <h2 className="font-semibold">{project.title}</h2>
@@ -29,17 +35,11 @@ const Work = (isDarkMode) => {
               </div>
               <div
                 className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-black
-                        group-hover:bg-lime-300 transition"
+                 group-hover:bg-lime-300 transition"
               >
-                {/* Wrap the arrow icon with a link to the PDF */}
-                <a
-                  href={project.pdfUrl} // Link to the PDF
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-5"
-                >
+                <div className="w-5">
                   <Image src={assets.send_icon} alt="send icon" />
-                </a>
+                </div>
               </div>
             </div>
           </div>
