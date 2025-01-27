@@ -1,0 +1,33 @@
+{
+  "name": "Dharma Teja Bandaru",
+  "short_name": "Dharma Bandaru",
+  "description": "Backend Engineer & AI Developer specializing in Gen-AI agents, RAG applications, and AWS services. Based in Austin, TX.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+  "lang": "en-US",
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "label": "Dharma Bandaru's Portfolio"
+    }
+  ],
+  "categories": ["portfolio", "technology", "development", "AI"],
+  "shortcuts": [
+    {
+      "name": "About",
+      "url": "/about",
+      "description": "Learn more about Dharma Bandaru"
+    },
+    {
+      "name": "Books",
+      "url": "/work",
+      "description": "View book summaries"
+    }
+  ]
+}
