@@ -1,11 +1,10 @@
 import { Outfit, Ovo } from 'next/font/google';
 import './globals.css';
 
-// Font optimizations
 const outfit = Outfit({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  display: 'swap', // Ensures text remains visible during loading
+  display: 'swap',
   variable: '--font-outfit',
 });
 
@@ -23,9 +22,10 @@ export const metadata = {
     template: '%s | Dharma Bandaru',
   },
   description:
-    'Backend Engineer specializing in Gen-AI agents, RAG applications, and AWS services. Based in Austin, TX, with expertise in API development, cloud architecture, and security implementation.',
+    'Backend Engineer (Dharma Teja Bandaru) specializing in Gen-AI agents, RAG applications, and AWS services. Based in Austin, TX, with expertise in API development, cloud architecture, and security implementation.',
   keywords: [
     'Dharma Bandaru',
+    'Dharma Teja Bandaru',
     'Backend Engineer',
     'AI Developer',
     'AWS Services',
@@ -42,7 +42,13 @@ export const metadata = {
     'CI/CD',
     'Security Implementation',
   ],
-  authors: [{ name: 'Dharma Bandaru', url: 'https://dharmabandaru.com' }],
+  authors: [
+    {
+      name: 'Dharma Bandaru',
+      url: 'https://dharmabandaru.com',
+      alternateName: 'Dharma Teja Bandaru',
+    },
+  ],
   creator: 'Dharma Bandaru',
   publisher: 'Dharma Bandaru',
   alternates: {
@@ -69,10 +75,10 @@ export const metadata = {
     siteName: 'Dharma Bandaru',
     images: [
       {
-        url: '/og-image.jpg', // Make sure to add this image to your public folder
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dharma Bandaru',
+        alt: 'Dharma Bandaru - Backend Engineer & AI Developer',
       },
     ],
   },
@@ -82,10 +88,10 @@ export const metadata = {
     description:
       'Backend Engineer specializing in Gen-AI agents and AWS services. Based in Austin, TX.',
     images: ['/og-image.jpg'],
-    creator: '@yourtwitterhandle', // Add your Twitter handle if you have one
+    creator: '@yourtwitterhandle',
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: 'your-google-verification-code',
   },
   category: 'technology',
 };
@@ -112,7 +118,6 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
 
-        {/* Preconnect to relevant domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

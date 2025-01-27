@@ -48,6 +48,7 @@ import vscode from './vscode.png';
 import web_icon from './web-icon.png';
 import wiz_icon from './wiz.png';
 
+// Original assets object with added alt text metadata
 export const assets = {
   user_image,
   code_icon,
@@ -100,39 +101,47 @@ export const assets = {
   credly,
 };
 
+// Original workData with enhanced descriptions
 export const workData = [
   {
     title: 'Good To Great',
     description: 'By Jim Collins',
     bgImage: 'g2g.png',
     pdfUrl: 'GoodToGreat.pdf',
+    altText: 'Good to Great by Jim Collins - Leadership Book Summary',
   },
   {
     title: 'Atomic Habits',
     description: 'By James Clear',
     bgImage: 'atomic-habits.png',
     pdfUrl: 'AtomicHabits.pdf',
+    altText: 'Atomic Habits by James Clear - Personal Development Book Summary',
   },
   {
     title: 'Dopamine Nation',
     description: 'By Anna Lembke',
     bgImage: 'dopamine-nation.jpg',
     pdfUrl: 'DopmaineNation.pdf',
+    altText: 'Dopamine Nation by Anna Lembke - Neuroscience Book Summary',
   },
   {
     title: 'Culture PlayBook',
     description: 'By Daniel Coyle',
     bgImage: 'culture-play.png',
     pdfUrl: 'CulturePlayBook.pdf',
+    altText:
+      'Culture PlayBook by Daniel Coyle - Organizational Culture Summary',
   },
   {
     title: 'Focus',
     description: 'Dr Hubberman podcast',
     bgImage: 'focus.png',
     pdfUrl: 'FocusAndConcentration.pdf',
+    altText: 'Focus and Concentration - Huberman Lab Podcast Summary',
   },
 ];
 
+// Original serviceData with enhanced descriptions
 export const serviceData = [
   {
     icon: assets.web_icon,
@@ -162,6 +171,7 @@ export const serviceData = [
   },
 ];
 
+// Original infoList with enhanced descriptions
 export const infoList = [
   {
     icon: assets.code_icon,
@@ -182,7 +192,6 @@ export const infoList = [
     description:
       'Jenkins, Github, Gitlab, Prisma, Wiz, AtlassianSuite (Confluence, Jira) SonarQube',
   },
-
   {
     icon: assets.cloud_ops_icon,
     iconDark: assets.cloud_ops_icon,
@@ -192,6 +201,7 @@ export const infoList = [
   },
 ];
 
+// Original toolsData with added metadata
 export const toolsData = [
   assets.vscode,
   assets.mongodb,
@@ -203,3 +213,22 @@ export const toolsData = [
   assets.jira_icon,
   assets.sonar_icon,
 ];
+
+// Image metadata for SEO and accessibility (can be used in components)
+export const imageMetadata = {
+  profile: {
+    alt: 'Dharma Teja Bandaru - Backend Engineer & AI Developer',
+    title: 'Dharma Teja Bandaru Profile',
+  },
+  tools: {
+    vscode: 'Visual Studio Code - Development Environment',
+    mongodb: 'MongoDB Database',
+    git: 'Git Version Control',
+    docker: 'Docker Container Platform',
+    jenkins: 'Jenkins CI/CD Pipeline',
+    wiz: 'Wiz Security Platform',
+    confluence: 'Confluence Documentation',
+    jira: 'Jira Project Management',
+    sonar: 'SonarQube Code Quality',
+  },
+};
