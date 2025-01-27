@@ -18,7 +18,7 @@ const ovo = Ovo({
 export const metadata = {
   metadataBase: new URL('https://dharmabandaru.com'),
   title: {
-    default: 'Dharma Bandaru',
+    default: 'Dharma Bandaru | Software Engineer | Austin, TX',
     template: '%s | Dharma Bandaru',
   },
   description:
@@ -69,7 +69,7 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://dharmabandaru.com',
-    title: 'Dharma Bandaru',
+    title: 'Dharma Bandaru | Dharma Teja Bandaru | Austin, TX',
     description:
       'Backend Engineer specializing in Gen-AI agents, RAG applications, and AWS services. Expert in cloud architecture and security implementation.',
     siteName: 'Dharma Bandaru',

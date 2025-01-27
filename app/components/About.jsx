@@ -1,6 +1,6 @@
 import { assets, infoList, toolsData } from '@/assets/assets';
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const About = ({ isDarkMode }) => {
   const title = 'About Dharma Bandaru - Backend Engineer & AI Developer';
@@ -26,9 +26,9 @@ const About = ({ isDarkMode }) => {
         aria-label="About Dharma Bandaru"
       >
         <h2 className="text-center mb-2 text-lg font-Ovo">Introduction</h2>
-        <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo">
+        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo">
           About me
-        </h1>
+        </h2>
 
         <div className="flex w-full flex-col lg:flex-row items-center gap-12 lg:gap-20 my-20">
           <div className="w-48 sm:w-64 lg:w-80 rounded-3xl max-w-none">
