@@ -74,9 +74,9 @@ const Work = () => {
           <h2 className="text-center mb-2 text-lg font-Ovo">
             A page for Books
           </h2>
-          <h1 className="text-center text-5xl font-Ovo">
+          <h2 className="text-center text-5xl font-Ovo">
             Curated Book Summaries
-          </h1>
+          </h2>
           <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
             Out of 10 pick-and-choose books, 5 feel like a second read, 2 compel
             me to write summaries. Here are the summaries, with more to come.

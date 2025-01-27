@@ -1,7 +1,7 @@
 import { assets } from '@/assets/assets';
+import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
-import Head from 'next/head';
 
 const Contact = () => {
   const [result, setResult] = useState('');
@@ -58,7 +58,7 @@ const Contact = () => {
         aria-label="Contact section"
       >
         <h2 className="text-center mb-2 text-lg font-Ovo">Connect</h2>
-        <h1 className="text-center text-5xl font-Ovo">Stay in touch</h1>
+        <h2 className="text-center text-5xl font-Ovo">Stay in touch</h2>
         <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
           Ideally this form is not needed :) but just left it as it came with
           template. It's working though.
