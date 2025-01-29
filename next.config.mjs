@@ -31,7 +31,7 @@ const securityHeaders = [
   },
   {
     key: 'X-Powered-By',
-    value: '', // This removes the X-Powered-By header
+    value: '',
   },
 ];
 
@@ -56,6 +56,14 @@ const nextConfig = {
         ],
         permanent: true,
         destination: 'https://dharmabandaru.com/:path*',
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/_headers',
+        destination: '/_headers',
       },
     ];
   },
