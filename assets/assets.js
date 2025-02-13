@@ -139,6 +139,14 @@ export const workData = [
     pdfUrl: 'FocusAndConcentration.pdf',
     altText: 'Focus and Concentration - Huberman Lab Podcast Summary',
   },
+
+  {
+    title: 'Magic of Thinking Big',
+    description: 'David J. Schwartz',
+    bgImage: 'think-big.jpg',
+    pdfUrl: 'Magic-of-thinking-big.pdf',
+    altText: 'ThinkBig - Summary',
+  },
 ];
 
 // Original serviceData with enhanced descriptions
