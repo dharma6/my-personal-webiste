@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Work from './components/Work';
+import DemoVideo from './components/DemoVideo';
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false); // Start with false to prevent flash
@@ -101,6 +102,7 @@ export default function Home() {
 
         <main id="main-content">
           <Header isDarkMode={isDarkMode} />
+          <DemoVideo />
           <Work isDarkMode={isDarkMode} />
           <About isDarkMode={isDarkMode} />
           <Contact isDarkMode={isDarkMode} />
