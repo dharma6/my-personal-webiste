@@ -74,24 +74,24 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           role="list"
         >
           <li>
-            <a className="font-Ovo hover:underline" href="#top">
+            <a className="font-Ovo hover:underline" href="/#top">
               Home
             </a>
           </li>
           <li>
-            <a className="font-Ovo hover:underline" href="#work">
+            <a className="font-Ovo hover:underline" href="/#work">
               Book Summaries
             </a>
           </li>
           <li>
-            <a className="font-Ovo hover:underline" href="#about">
+            <a className="font-Ovo hover:underline" href="/#about">
               Professional Profile
             </a>
           </li>
           <li>
-            <a className="font-Ovo hover:underline" href="#contact">
-              Contact me
-            </a>
+            <Link className="font-Ovo hover:underline" href="/demos">
+              Technical Demos
+            </Link>
           </li>
         </ul>
 
@@ -110,23 +110,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               aria-hidden="true"
             />
           </button>
-
-          <a
-            href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border
-                border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50 hover:bg-gray-100 dark:hover:bg-gray-800"
-            aria-label="Contact me"
-          >
-            Contact
-            <Image
-              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
-              alt=""
-              className="w-3"
-              width={12}
-              height={12}
-              aria-hidden="true"
-            />
-          </a>
 
           <button
             className="block md:hidden ml-3 p-2"
@@ -173,7 +156,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             <a
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={closeMenu}
-              href="#top"
+              href="/#top"
               role="menuitem"
             >
               Home
@@ -183,17 +166,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             <a
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={closeMenu}
-              href="#about"
-              role="menuitem"
-            >
-              Professional Profile
-            </a>
-          </li>
-          <li role="none">
-            <a
-              className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
-              onClick={closeMenu}
-              href="#work"
+              href="/#work"
               role="menuitem"
             >
               Book Summaries
@@ -203,11 +176,21 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             <a
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={closeMenu}
-              href="#contact"
+              href="/#about"
               role="menuitem"
             >
-              Contact
+              Professional Profile
             </a>
+          </li>
+          <li role="none">
+            <Link
+              className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={closeMenu}
+              href="/demos"
+              role="menuitem"
+            >
+              Technical Demos
+            </Link>
           </li>
         </ul>
       </nav>

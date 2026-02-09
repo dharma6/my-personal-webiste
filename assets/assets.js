@@ -106,45 +106,51 @@ export const workData = [
   {
     title: 'Good To Great',
     description: 'By Jim Collins',
-    bgImage: 'g2g.png',
-    pdfUrl: 'GoodToGreat.pdf',
+    bgImage: 'g2g.webp',
+    pdfUrl:
+      'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/GoodToGreat.pdf',
     altText: 'Good to Great by Jim Collins - Leadership Book Summary',
   },
   {
     title: 'Atomic Habits',
     description: 'By James Clear',
-    bgImage: 'atomic-habits.png',
-    pdfUrl: 'AtomicHabits.pdf',
+    bgImage: 'atomic-habits.webp',
+    pdfUrl:
+      'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/AtomicHabits.pdf',
     altText: 'Atomic Habits by James Clear - Personal Development Book Summary',
   },
   {
     title: 'Dopamine Nation',
     description: 'By Anna Lembke',
-    bgImage: 'dopamine-nation.jpg',
-    pdfUrl: 'DopmaineNation.pdf',
+    bgImage: 'dopamine-nation.webp',
+    pdfUrl:
+      'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/DopmaineNation.pdf',
     altText: 'Dopamine Nation by Anna Lembke - Neuroscience Book Summary',
   },
   {
     title: 'Culture PlayBook',
     description: 'By Daniel Coyle',
-    bgImage: 'culture-play.png',
-    pdfUrl: 'CulturePlayBook.pdf',
+    bgImage: 'culture-play.webp',
+    pdfUrl:
+      'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/CulturePlayBook.pdf',
     altText:
       'Culture PlayBook by Daniel Coyle - Organizational Culture Summary',
   },
   {
     title: 'Focus',
     description: 'Dr Hubberman podcast',
-    bgImage: 'focus.png',
-    pdfUrl: 'FocusAndConcentration.pdf',
+    bgImage: 'focus.webp',
+    pdfUrl:
+      'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/FocusAndConcentration.pdf',
     altText: 'Focus and Concentration - Huberman Lab Podcast Summary',
   },
 
   {
     title: 'Magic of Thinking Big',
     description: 'David J. Schwartz',
-    bgImage: 'think-big.jpg',
-    pdfUrl: 'Magic-of-thinking-big.pdf',
+    bgImage: 'think-big.webp',
+    pdfUrl:
+      'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/Magic-of-thinking-big.pdf',
     altText: 'ThinkBig - Summary',
   },
 ];

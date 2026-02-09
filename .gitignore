@@ -24,6 +24,23 @@
 .DS_Store
 *.pem
 
+# large video files
+*.mov
+*.mp4
+*.webm
+*.avi
+
+# PDF files (hosted on S3)
+*.pdf
+
+# Original image files (optimized versions in WebP format)
+public/atomic-habits.png
+public/culture-play.png
+public/dopamine-nation.jpg
+public/focus.png
+public/g2g.png
+public/think-big.jpg
+
 # debug
 npm-debug.log*
 yarn-debug.log*

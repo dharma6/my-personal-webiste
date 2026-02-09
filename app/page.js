@@ -1,14 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import About from './components/About';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Work from './components/Work';
-import DemoVideo from './components/DemoVideo';
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false); // Start with false to prevent flash
@@ -102,10 +100,8 @@ export default function Home() {
 
         <main id="main-content">
           <Header isDarkMode={isDarkMode} />
-          <DemoVideo />
           <Work isDarkMode={isDarkMode} />
           <About isDarkMode={isDarkMode} />
-          <Contact isDarkMode={isDarkMode} />
         </main>
 
         <Footer isDarkMode={isDarkMode} />

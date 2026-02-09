@@ -1,4 +1,5 @@
 import { Outfit, Ovo } from 'next/font/google';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import './globals.css';
 
 const outfit = Outfit({
@@ -18,11 +19,11 @@ const ovo = Ovo({
 export const metadata = {
   metadataBase: new URL('https://dharmabandaru.com'),
   title: {
-    default: 'Dharma Bandaru | Software Engineer | Austin, TX',
+    default: 'Dharma Bandaru | Software Engineer | St. Louis, MO',
     template: '%s | Dharma Bandaru',
   },
   description:
-    'Backend Engineer (Dharma Teja Bandaru) specializing in Gen-AI agents, RAG applications, and AWS services. Based in Austin, TX, with expertise in API development, cloud architecture, and security implementation.',
+    'Backend Engineer (Dharma Teja Bandaru) specializing in Gen-AI agents, RAG applications, and AWS services. Based in St. Louis, MO - the Arch City, with expertise in API development, cloud architecture, and security implementation.',
   keywords: [
     'Dharma Bandaru',
     'Dharma Teja Bandaru',
@@ -33,7 +34,7 @@ export const metadata = {
     'RAG Applications',
     'API Development',
     'Cloud Architecture',
-    'Austin Tech',
+    'St. Louis Tech',
     'Software Engineer',
     'Full Stack Developer',
     'AWS Lambda',
@@ -69,7 +70,7 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://dharmabandaru.com',
-    title: 'Dharma Bandaru | Dharma Teja Bandaru | Austin, TX',
+    title: 'Dharma Bandaru | Dharma Teja Bandaru | St. Louis, MO',
     description:
       'Backend Engineer specializing in Gen-AI agents, RAG applications, and AWS services. Expert in cloud architecture and security implementation.',
     siteName: 'Dharma Bandaru',
@@ -86,7 +87,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Dharma Bandaru',
     description:
-      'Backend Engineer specializing in Gen-AI agents and AWS services. Based in Austin, TX.',
+      'Backend Engineer specializing in Gen-AI agents and AWS services. Based in St. Louis, MO - the Arch City.',
     images: ['/og-image.jpg'],
     creator: '@yourtwitterhandle',
   },
@@ -106,6 +107,34 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Dharma Teja Bandaru',
+    alternateName: 'Dharma Bandaru',
+    url: 'https://dharmabandaru.com',
+    jobTitle: 'Backend Engineer & AI Developer',
+    description:
+      'Backend Engineer specializing in Gen-AI agents, RAG applications, and AWS services',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'St. Louis',
+      addressRegion: 'MO',
+      addressCountry: 'US',
+    },
+    knowsAbout: [
+      'AWS Services',
+      'Gen-AI',
+      'Backend Development',
+      'Cloud Architecture',
+      'API Development',
+      'RAG Applications',
+      'Python',
+      'TypeScript',
+      'Next.js',
+    ],
+  };
+
   return (
     <html
       lang="en"
@@ -124,11 +153,20 @@ export default function RootLayout({ children }) {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden
           dark:bg-darkTheme dark:text-white min-h-screen`}
       >
+        <GoogleAnalytics
+          measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+        />
         {children}
       </body>
     </html>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 const About = ({ isDarkMode }) => {
   const title = 'About Dharma Bandaru - Backend Engineer & AI Developer';
   const description =
-    'Learn about Dharma Bandaru, a backend engineer based in Austin, TX, specializing in Gen-AI agents, RAG applications, and AWS services. Explore my technical expertise and tools.';
+    'Learn about Dharma Bandaru, a backend engineer based in St. Louis, MO, specializing in Gen-AI agents, RAG applications, and AWS services. Explore my technical expertise and tools.';
 
   return (
     <>
@@ -44,8 +44,9 @@ const About = ({ isDarkMode }) => {
           <div className="flex-1">
             <ul className="mb-10 max-w-2xl font-Ovo list-disc pl-5" role="list">
               <li>
-                Based in Austin, TX, and currently building and enhancing Gen-AI
-                agents in a Retrieval-Augmented Generation (RAG) Application.
+                Based in St. Louis, MO - the Arch City, where I build and
+                enhance Gen-AI agents, RAG applications, and actively experiment
+                with Agentic AI and Model Context Protocol (MCP).
               </li>
               <li>
                 Primarily a backend engineer with expertise in designing,
@@ -159,7 +160,7 @@ const About = ({ isDarkMode }) => {
           </a>
 
           <a
-            href="Dharma_Bandaru_Resume.pdf"
+            href="https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/Dharma_Bandaru_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white"
