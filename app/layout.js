@@ -76,7 +76,7 @@ export const metadata = {
     siteName: 'Dharma Bandaru',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://dharmabandaru.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Dharma Bandaru - Backend Engineer & AI Developer',
@@ -88,7 +88,7 @@ export const metadata = {
     title: 'Dharma Bandaru',
     description:
       'Backend Engineer specializing in Gen-AI agents and AWS services. Based in St. Louis, MO - the Arch City.',
-    images: ['/og-image.jpg'],
+    images: ['https://dharmabandaru.com/og-image.jpg'],
     creator: '@yourtwitterhandle',
   },
   verification: {

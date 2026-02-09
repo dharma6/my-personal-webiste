@@ -74,9 +74,20 @@ export default function Home() {
           content="Personal website of Dharma Bandaru, featuring book summaries, professional journey, and projects."
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dharmabandaru.com" />
+        <meta
+          property="og:image"
+          content="https://dharmabandaru.com/og-image.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="Dharma Bandaru - Backend Engineer & AI Developer"
+        />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
           content="Dharma Bandaru - Backend Engineer & AI Developer"
@@ -84,6 +95,10 @@ export default function Home() {
         <meta
           name="twitter:description"
           content="Personal website of Dharma Bandaru, featuring book summaries, professional journey, and projects."
+        />
+        <meta
+          name="twitter:image"
+          content="https://dharmabandaru.com/og-image.jpg"
         />
       </Head>
 
