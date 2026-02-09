@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# kiro specs and development files
+.kiro/
+
 # large video files
 *.mov
 *.mp4

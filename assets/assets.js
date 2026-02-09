@@ -20,6 +20,7 @@ import git from './git.png';
 import graphics_icon from './graphics-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
+import investment_icon from './investment-icon.svg';
 import jenkins from './jenkins.png';
 import jira_icon from './jira.png';
 import linkedin from './linkedIn.png';
@@ -99,6 +100,7 @@ export const assets = {
   sonar_icon,
   linkedin,
   credly,
+  investment_icon,
 };
 
 // Original workData with enhanced descriptions
@@ -227,6 +229,62 @@ export const toolsData = [
   assets.jira_icon,
   assets.sonar_icon,
 ];
+
+// Investment Thesis Data
+export const investmentLessons = [
+  {
+    number: 1,
+    title: 'Selling options beats buying them',
+    subtitle: '(especially if you love options trading)',
+    description:
+      "Selling covered calls and cash-secured puts stacks probabilities in your favor. Buying options is a completely different game—and an expensive one if you're still early.",
+  },
+  {
+    number: 2,
+    title: 'ETFs reduce stress',
+    description:
+      'Individual stocks carry single-company risk. ETFs smooth the ride, reduce decision fatigue, and reward patience.',
+  },
+  {
+    number: 3,
+    title: 'Consistency compounds',
+    description:
+      'Recurring investments into funds like SPY or VOO may feel boring—but boring builds wealth.',
+  },
+  {
+    number: 4,
+    title: "Money rotates—it doesn't vanish",
+    description:
+      "Just like energy, capital moves from one sector to another—tech to defensives, growth to safety, one cycle to the next. If you can recognize these rotations and buy quality sectors when they're out of favor, time and price work in your favor.",
+  },
+];
+
+export const investmentJourney = {
+  intro:
+    "Like most people, I didn't start investing—I wandered into it.\n\nI downloaded Robinhood, made a few random trades, and felt a strange sense of victory seeing a $5 or $10 profit. Sometimes I sold just to lock in that feeling. Other times, I lost far more than I ever made. Looking back, it wasn't investing. It was gambling—with better UX.",
+  sections: [
+    {
+      title: "Familiarity Isn't a Strategy",
+      content:
+        "My early logic was simple: if I recognized a company while driving to work or running errands, I'd look it up on Robinhood. If the stock was under $100, I'd buy it. If it went up, I sold. If it went down, I shrugged.\n\nLuck—not skill.",
+    },
+    {
+      title: 'Learning the Numbers—and What They Miss',
+      content:
+        "Eventually, I started studying fundamentals: P/E, PEG, margins, cash flow. For the first time, I felt grounded. But something still didn't make sense. Great companies stayed flat. Cheap stocks stayed cheap.\n\nThat's when it clicked: fundamentals matter, but growth expectations matter more. A company can be excellent—and still go nowhere if the market doesn't see what's next.",
+    },
+    {
+      title: 'The Shift That Changed Everything',
+      content:
+        'Then I discovered options—specifically selling covered calls and cash-secured puts. This came from a mentor who completely changed how I think about investing (that story deserves its own blog).\n\nEverything shifted. I stopped predicting prices and started getting paid for patience. The strategy was calmer, repeatable, and logical. Over time, it helped me triple my portfolio and gave me the confidence to invest consistently.',
+    },
+    {
+      title: 'The Tuition Fee',
+      content:
+        'Of course, boredom crept in.\n\nI started buying calls and puts. At first, it worked—fast money, big wins. Then reality showed up. I gave it back and took a $5–6K loss.\n\nPainful—but necessary.\n\nI returned to what worked.',
+    },
+  ],
+};
 
 // Image metadata for SEO and accessibility (can be used in components)
 export const imageMetadata = {

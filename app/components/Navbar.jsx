@@ -89,6 +89,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </a>
           </li>
           <li>
+            <Link
+              className="font-Ovo hover:underline"
+              href="/investment-thesis"
+            >
+              Investment Thesis
+            </Link>
+          </li>
+          <li>
             <Link className="font-Ovo hover:underline" href="/demos">
               Technical Demos
             </Link>
@@ -181,6 +189,16 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             >
               Professional Profile
             </a>
+          </li>
+          <li role="none">
+            <Link
+              className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={closeMenu}
+              href="/investment-thesis"
+              role="menuitem"
+            >
+              Investment Thesis
+            </Link>
           </li>
           <li role="none">
             <Link
