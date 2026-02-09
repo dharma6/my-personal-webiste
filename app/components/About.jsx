@@ -25,12 +25,14 @@ const About = ({ isDarkMode }) => {
         className="w-full px-4 sm:px-10 lg:px-[12%] py-10 scroll-mt-20"
         aria-label="About Dharma Bandaru"
       >
-        <h2 className="text-center mb-2 text-lg font-Ovo">Introduction</h2>
-        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo">
+        <h2 className="text-center mb-2 text-lg font-Ovo fade-in-section">
+          Introduction
+        </h2>
+        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo fade-in-section">
           About me
         </h2>
 
-        <div className="flex w-full flex-col lg:flex-row items-center gap-12 lg:gap-20 my-20">
+        <div className="flex w-full flex-col lg:flex-row items-center gap-12 lg:gap-20 my-20 fade-in-section">
           <div className="w-48 sm:w-64 lg:w-80 rounded-3xl max-w-none">
             <Image
               src={assets.user_image}

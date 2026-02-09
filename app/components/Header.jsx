@@ -25,7 +25,7 @@ export const metadata = {
 const Header = () => {
   return (
     <header className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2">
-      <div className="mb-6">
+      <div className="mb-6 fade-in-section">
         <Image
           src={assets.dharma_profile}
           alt="Dharma Teja Bandaru - Backend Engineer & AI Developer"
@@ -37,7 +37,7 @@ const Header = () => {
       </div>
 
       {/* Main H1 heading for the entire page */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-Ovo mb-6">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-Ovo mb-6 fade-in-section">
         Hi, I'm Dharma Bandaru{' '}
         <span className="inline-flex items-center">
           <Image
@@ -52,12 +52,12 @@ const Header = () => {
       </h1>
 
       {/* Changed from h2 to div to maintain semantic structure */}
-      <div className="text-xl md:text-2xl mb-3 font-Ovo text-gray-700 dark:text-gray-300">
+      <div className="text-xl md:text-2xl mb-3 font-Ovo text-gray-700 dark:text-gray-300 fade-in-section">
         Why I Built This Website
       </div>
 
       <ul
-        className="max-w-2xl mx-auto font-Ovo list-disc list-inside mb-3 text-lg md:text-xl space-y-2"
+        className="max-w-2xl mx-auto font-Ovo list-disc list-inside mb-3 text-lg md:text-xl space-y-2 fade-in-section"
         role="list"
       >
         <li className="text-gray-800 dark:text-gray-200">

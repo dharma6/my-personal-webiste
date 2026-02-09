@@ -53,6 +53,30 @@ export default function Home() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
+  // Intersection Observer for fade-in animations
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections with fade-in-section class
+    const sections = document.querySelectorAll('.fade-in-section');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, [mounted]);
+
   return (
     <>
       <Head>

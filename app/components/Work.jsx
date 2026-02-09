@@ -70,7 +70,7 @@ const Work = () => {
         className="w-full px-[12%] py-10 scroll-mt-20"
         aria-label="Book Summaries"
       >
-        <header className="mb-12">
+        <header className="mb-12 fade-in-section">
           <h2 className="text-center mb-2 text-lg font-Ovo">
             A page for Books
           </h2>
@@ -84,7 +84,7 @@ const Work = () => {
         </header>
 
         <div
-          className="grid grid-cols-auto my-10 gap-5 dark:text-black"
+          className="grid grid-cols-auto my-10 gap-5 dark:text-black fade-in-section"
           role="list"
           aria-label="Book summary cards"
         >
