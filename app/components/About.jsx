@@ -162,7 +162,7 @@ const About = ({ isDarkMode }) => {
           </a>
 
           <a
-            href="https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/Dharma_Bandaru_Resume.pdf"
+            href="/Dharma_Bandaru_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white"
@@ -172,6 +172,23 @@ const About = ({ isDarkMode }) => {
             <Image
               src={assets.download_icon}
               alt="Download icon"
+              className="w-4"
+              width={16}
+              height={16}
+            />
+          </a>
+
+          <a
+            href="https://github.com/dharma6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white"
+            aria-label="Visit Dharma Bandaru's GitHub profile"
+          >
+            GitHub{' '}
+            <Image
+              src={assets.git}
+              alt="GitHub icon"
               className="w-4"
               width={16}
               height={16}

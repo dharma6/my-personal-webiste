@@ -35,6 +35,8 @@
 
 # PDF files (hosted on S3)
 *.pdf
+# Allow resume to be tracked
+!public/Dharma_Bandaru_Resume.pdf
 
 # Original image files (optimized versions in WebP format)
 public/atomic-habits.png
