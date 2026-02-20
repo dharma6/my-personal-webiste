@@ -78,16 +78,19 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Home
             </a>
           </li>
-          <li>
-            <Link className="font-Ovo hover:underline" href="/book-summaries">
-              Book Summaries
-            </Link>
-          </li>
+
           <li>
             <a className="font-Ovo hover:underline" href="/#about">
               Professional Profile
             </a>
           </li>
+
+          <li>
+            <Link className="font-Ovo hover:underline" href="/book-summaries">
+              Book Summaries
+            </Link>
+          </li>
+
           <li>
             <Link
               className="font-Ovo hover:underline"
