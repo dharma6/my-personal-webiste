@@ -2,13 +2,12 @@
 
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import About from './components/About';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import Work from '../components/Work';
 
-export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false); // Start with false to prevent flash
+export default function BookSummariesPage() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   // Handle initial theme setup
@@ -67,7 +66,6 @@ export default function Home() {
       });
     }, observerOptions);
 
-    // Observe all sections with fade-in-section class
     const sections = document.querySelectorAll('.fade-in-section');
     sections.forEach((section) => observer.observe(section));
 
@@ -79,10 +77,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Dharma Bandaru - Backend Engineer & AI Developer</title>
+        <title>Book Summaries - Dharma Bandaru</title>
         <meta
           name="description"
-          content="Personal website of Dharma Bandaru, featuring book summaries, professional journey, and projects. Experienced in backend development, Gen-AI, and AWS."
+          content="Explore hand-picked summaries of influential books on leadership, habits, neuroscience, and culture. Carefully analyzed and distilled for maximum learning impact by Dharma Bandaru."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content={isDarkMode ? '#1a1a1a' : '#ffffff'} />
@@ -90,43 +88,39 @@ export default function Home() {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Dharma Bandaru - Backend Engineer & AI Developer"
+          content="Book Summaries by Dharma Bandaru | Curated Learning Resources"
         />
         <meta
           property="og:description"
-          content="Personal website of Dharma Bandaru, featuring book summaries, professional journey, and projects."
+          content="Explore hand-picked summaries of influential books on leadership, habits, neuroscience, and culture."
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dharmabandaru.com" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://dharmabandaru.com/book-summaries"
+        />
         <meta
           property="og:image"
-          content="https://dharmabandaru.com/og-image.jpg"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta
-          property="og:image:alt"
-          content="Dharma Bandaru - Backend Engineer & AI Developer"
+          content="https://dharmabandaru.com/og-books-image.jpg"
         />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Dharma Bandaru - Backend Engineer & AI Developer"
+          content="Book Summaries by Dharma Bandaru"
         />
         <meta
           name="twitter:description"
-          content="Personal website of Dharma Bandaru, featuring book summaries, professional journey, and projects."
+          content="Curated summaries of impactful books on leadership, habits, and professional growth."
         />
         <meta
           name="twitter:image"
-          content="https://dharmabandaru.com/og-image.jpg"
+          content="https://dharmabandaru.com/og-books-image.jpg"
         />
       </Head>
 
       <div className="min-h-screen">
-        {/* Skip to main content link for accessibility */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black"
@@ -136,9 +130,8 @@ export default function Home() {
 
         <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
-        <main id="main-content">
-          <Header isDarkMode={isDarkMode} />
-          <About isDarkMode={isDarkMode} />
+        <main id="main-content" className="pt-20">
+          <Work isDarkMode={isDarkMode} />
         </main>
 
         <Footer isDarkMode={isDarkMode} />
