@@ -138,6 +138,7 @@ export default function ArticleContent({ slug }) {
   // Article content by slug
   const articleImages = {
     'my-2025-holdings': assets.holdings_2025,
+    'my-2026-holdings': assets.holdings_2026,
   };
 
   const articleImage = articleImages[slug];

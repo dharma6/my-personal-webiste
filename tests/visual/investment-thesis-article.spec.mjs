@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import {
   disableAnimations,
   setDarkMode,
@@ -7,9 +7,9 @@ import {
 } from './fixtures/test-helpers.mjs';
 
 const articleSlugs = [
+  { slug: 'my-2026-holdings', name: '2024 Holdings' },
   { slug: 'my-2025-holdings', name: '2025 Holdings' },
   { slug: 'investment-thesis', name: 'Investment Thesis' },
-  { slug: 'my-2024-holdings', name: '2024 Holdings' },
 ];
 
 for (const { slug, name } of articleSlugs) {
