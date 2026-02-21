@@ -1,3 +1,4 @@
+import holdings_2025 from './2025-holdings.png';
 import arrow_icon_dark from './arrow-icon-dark.png';
 import arrow_icon from './arrow-icon.png';
 import close_black from './close-black.png';
@@ -101,6 +102,7 @@ export const assets = {
   linkedin,
   credly,
   investment_icon,
+  holdings_2025,
 };
 
 // Original workData with enhanced descriptions
@@ -285,6 +287,35 @@ export const investmentJourney = {
     },
   ],
 };
+
+// Blog Posts Data
+export const blogPosts = [
+  {
+    slug: 'my-2025-holdings',
+    title: 'My 2025 Holdings',
+    subtitle: '2025 Portfolio',
+    date: '2025-02-21',
+    tags: ['portfolio', 'holdings'],
+  },
+  {
+    slug: 'investment-thesis',
+    title: 'Investment Thesis',
+    subtitle: 'Lessons from the Market',
+    excerpt:
+      'Four lessons I trust and my journey into investing — from random Robinhood trades to a repeatable options strategy.',
+    date: '2026-02-17',
+    tags: ['investing', 'options', 'lessons'],
+  },
+
+  {
+    slug: 'my-2024-holdings',
+    title: 'My 2024 Holdings',
+    subtitle: 'Year in Review',
+    excerpt: "What I held in 2024, what worked, and what didn't.",
+    date: '2024-01-01',
+    tags: ['portfolio', 'holdings'],
+  },
+];
 
 // Image metadata for SEO and accessibility (can be used in components)
 export const imageMetadata = {
