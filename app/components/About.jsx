@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 const About = ({ isDarkMode }) => {
-  const title = 'About Dharma Bandaru - Backend Engineer & AI Developer';
+  const title = 'About Dharma Bandaru - Sr.Software Engineer - Gen AI';
   const description =
     'Learn about Dharma Bandaru, a backend engineer based in St. Louis, MO, specializing in Gen-AI agents, RAG applications, and AWS services. Explore my technical expertise and tools.';
 

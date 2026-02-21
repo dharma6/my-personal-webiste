@@ -89,7 +89,7 @@ const jsonLd = {
   alternateName: 'Dharma Bandaru',
   url: 'https://dharmabandaru.com',
   image: 'https://dharmabandaru.com/og-image.jpg',
-  jobTitle: 'Backend Engineer & AI Developer',
+  jobTitle: 'Sr.Software Engineer - Gen AI',
   worksFor: {
     '@type': 'Organization',
     name: 'Your Company',

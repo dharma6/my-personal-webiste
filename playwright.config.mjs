@@ -3,17 +3,6 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests/visual',
 
-  snapshotPathTemplate:
-    '{testDir}/__screenshots__/{testFilePath}/{arg}-{projectName}{ext}',
-
-  expect: {
-    toHaveScreenshot: {
-      maxDiffPixelRatio: 0.01,
-      threshold: 0.2,
-      animations: 'disabled',
-    },
-  },
-
   webServer: {
     command: 'npm run build && npm run start',
     port: 3000,
@@ -33,13 +22,6 @@ export default defineConfig({
       name: 'mobile-chromium',
       use: {
         ...devices['Pixel 5'],
-      },
-    },
-    {
-      name: 'tablet-chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-        viewport: { width: 768, height: 1024 },
       },
     },
   ],

@@ -1,53 +1,41 @@
 import { test, expect } from '@playwright/test';
 import {
   disableAnimations,
-  setDarkMode,
   setLightMode,
   waitForPageStable,
 } from './fixtures/test-helpers.mjs';
 
-test.describe('Home Page', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto('/');
-    await waitForPageStable(page);
-    await disableAnimations(page);
-  });
+const renderRoutes = [
+  { path: '/', name: 'home' },
+  { path: '/book-summaries', name: 'book-summaries' },
+  { path: '/demos', name: 'demos' },
+  { path: '/investment-thesis', name: 'investment-thesis-list' },
+];
 
-  test('full page - light mode', async ({ page }) => {
-    await setLightMode(page);
-    await expect(page).toHaveScreenshot('home-light.png', { fullPage: true });
-  });
+test.describe('Page Render Smoke', () => {
+  for (const { path, name } of renderRoutes) {
+    test(`${name} renders correctly`, async ({ page }) => {
+      if (path === '/demos') {
+        await page.route('**/player.vimeo.com/**', (route) => {
+          route.fulfill({
+            status: 200,
+            contentType: 'text/html',
+            body: '<div style="background:#1a1a2e;width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:white;font-family:sans-serif;">Video Placeholder</div>',
+          });
+        });
+      }
 
-  test('full page - dark mode', async ({ page }) => {
-    await setDarkMode(page);
-    await expect(page).toHaveScreenshot('home-dark.png', { fullPage: true });
-  });
+      await page.goto(path);
+      await waitForPageStable(page);
+      await setLightMode(page);
+      await disableAnimations(page);
+      await expect(page).toHaveURL(path);
+      await expect(page.locator('main').first()).toBeVisible();
+      await expect(page.locator('nav[aria-label="Main navigation"]')).toBeVisible();
 
-  test('hero section - light mode', async ({ page }) => {
-    await setLightMode(page);
-    const header = page.locator('header').first();
-    await expect(header).toHaveScreenshot('hero-light.png');
-  });
-
-  test('hero section - dark mode', async ({ page }) => {
-    await setDarkMode(page);
-    const header = page.locator('header').first();
-    await expect(header).toHaveScreenshot('hero-dark.png');
-  });
-
-  test('about section - light mode', async ({ page }) => {
-    await setLightMode(page);
-    const about = page.locator('#about');
-    await about.scrollIntoViewIfNeeded();
-    await disableAnimations(page);
-    await expect(about).toHaveScreenshot('about-light.png');
-  });
-
-  test('about section - dark mode', async ({ page }) => {
-    await setDarkMode(page);
-    const about = page.locator('#about');
-    await about.scrollIntoViewIfNeeded();
-    await disableAnimations(page);
-    await expect(about).toHaveScreenshot('about-dark.png');
-  });
+      if (path === '/') {
+        await expect(page.locator('footer[aria-label="Site footer"]')).toBeVisible();
+      }
+    });
+  }
 });

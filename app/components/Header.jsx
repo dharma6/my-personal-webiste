@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 // Metadata configuration (move this to your page.js or layout.js)
 export const metadata = {
-  title: 'Dharma Teja Bandaru - Backend Engineer & AI Developer',
+  title: 'Dharma Teja Bandaru - Sr.Software Engineer - Gen AI',
   description:
     "Welcome to Dharma Bandaru's personal website featuring book summaries, professional journey, and projects. Explore curated content about technology and personal development.",
   openGraph: {
-    title: 'Dharma Teja Bandaru - Backend Engineer & AI Developer',
+    title: 'Dharma Teja Bandaru - Sr.Software Engineer - Gen AI',
     description:
       "Welcome to Dharma Bandaru's personal website featuring book summaries, professional journey, and projects.",
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata = {
         url: '/og-home-image.jpg', // Add this image to your public folder
         width: 1200,
         height: 630,
-        alt: 'Dharma Teja Bandaru - Backend Engineer & AI Developer',
+        alt: 'Dharma Teja Bandaru - Sr.Software Engineer - Gen AI',
       },
     ],
   },
@@ -28,7 +28,7 @@ const Header = () => {
       <div className="mb-6 fade-in-section">
         <Image
           src={assets.dharma_profile}
-          alt="Dharma Teja Bandaru - Backend Engineer & AI Developer"
+          alt="Dharma Teja Bandaru - Sr.Software Engineer - Gen AI"
           className="rounded-full w-32"
           priority
           width={128}

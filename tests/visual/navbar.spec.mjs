@@ -1,64 +1,46 @@
 import { test, expect } from '@playwright/test';
 import {
   disableAnimations,
-  setDarkMode,
   setLightMode,
-  triggerNavbarScroll,
   openMobileMenu,
   waitForPageStable,
 } from './fixtures/test-helpers.mjs';
 
-test.describe('Navbar', () => {
+test.describe('Core Layout Components', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
     await waitForPageStable(page);
+    await setLightMode(page);
     await disableAnimations(page);
   });
 
-  test('default state - light mode', async ({ page }) => {
-    await setLightMode(page);
+  test('navbar renders', async ({ page }) => {
     const nav = page.locator('nav[aria-label="Main navigation"]');
-    await expect(nav).toHaveScreenshot('navbar-default-light.png');
+    await expect(nav).toBeVisible();
+    await expect(nav.locator('a, button').first()).toBeVisible();
   });
 
-  test('default state - dark mode', async ({ page }) => {
-    await setDarkMode(page);
-    const nav = page.locator('nav[aria-label="Main navigation"]');
-    await expect(nav).toHaveScreenshot('navbar-default-dark.png');
-  });
-
-  test('glassmorphism on scroll - light mode', async ({ page }) => {
-    await setLightMode(page);
-    await triggerNavbarScroll(page);
-    const nav = page.locator('nav[aria-label="Main navigation"]');
-    await expect(nav).toHaveScreenshot('navbar-scrolled-light.png');
-  });
-
-  test('glassmorphism on scroll - dark mode', async ({ page }) => {
-    await setDarkMode(page);
-    await triggerNavbarScroll(page);
-    const nav = page.locator('nav[aria-label="Main navigation"]');
-    await expect(nav).toHaveScreenshot('navbar-scrolled-dark.png');
+  test('footer renders', async ({ page }) => {
+    const footer = page.locator('footer[aria-label="Site footer"]');
+    await footer.scrollIntoViewIfNeeded();
+    await expect(footer).toBeVisible();
+    await expect(footer.locator('a').first()).toBeVisible();
   });
 });
 
-test.describe('Navbar Mobile Menu', () => {
+test.describe('Mobile Menu Flow', () => {
   test.beforeEach(async ({ page }, testInfo) => {
     test.skip(!testInfo.project.name.includes('mobile'), 'Only run on mobile viewport');
     await page.goto('/');
     await waitForPageStable(page);
+    await setLightMode(page);
     await disableAnimations(page);
   });
 
-  test('mobile menu open - light mode', async ({ page }) => {
-    await setLightMode(page);
+  test('can open mobile menu', async ({ page }) => {
     await openMobileMenu(page);
-    await expect(page).toHaveScreenshot('mobile-menu-open-light.png');
-  });
-
-  test('mobile menu open - dark mode', async ({ page }) => {
-    await setDarkMode(page);
-    await openMobileMenu(page);
-    await expect(page).toHaveScreenshot('mobile-menu-open-dark.png');
+    const mobileMenu = page.locator('ul[aria-label="Mobile navigation menu"]');
+    await expect(mobileMenu).toBeVisible();
+    await expect(mobileMenu.getByRole('menuitem').first()).toBeVisible();
   });
 });

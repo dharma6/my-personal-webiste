@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Dharma Bandaru - Backend Engineer & AI Developer</title>
+        <title>Dharma Bandaru - Sr.Software Engineer - Gen AI</title>
         <meta
           name="description"
           content="Personal website of Dharma Bandaru, featuring book summaries, professional journey, and projects. Experienced in backend development, Gen-AI, and AWS."
@@ -90,7 +90,7 @@ export default function Home() {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Dharma Bandaru - Backend Engineer & AI Developer"
+          content="Dharma Bandaru - Sr.Software Engineer - Gen AI"
         />
         <meta
           property="og:description"
@@ -106,14 +106,14 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Dharma Bandaru - Backend Engineer & AI Developer"
+          content="Dharma Bandaru - Sr.Software Engineer - Gen AI"
         />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Dharma Bandaru - Backend Engineer & AI Developer"
+          content="Dharma Bandaru - Sr.Software Engineer - Gen AI"
         />
         <meta
           name="twitter:description"

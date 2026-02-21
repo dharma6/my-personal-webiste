@@ -198,7 +198,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Investment Thesis
             </Link>
           </li>
-          <li role="none">
+          {/* <li role="none">
             <Link
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={closeMenu}
@@ -207,7 +207,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             >
               Technical Demos
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </>

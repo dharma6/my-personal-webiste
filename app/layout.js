@@ -79,7 +79,7 @@ export const metadata = {
         url: 'https://dharmabandaru.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dharma Bandaru - Backend Engineer & AI Developer',
+        alt: 'Dharma Bandaru - Sr.Software Engineer - Gen AI',
       },
     ],
   },
@@ -113,7 +113,7 @@ export default function RootLayout({ children }) {
     name: 'Dharma Teja Bandaru',
     alternateName: 'Dharma Bandaru',
     url: 'https://dharmabandaru.com',
-    jobTitle: 'Backend Engineer & AI Developer',
+    jobTitle: 'Sr.Software Engineer - Gen AI',
     description:
       'Backend Engineer specializing in Gen-AI agents, RAG applications, and AWS services',
     address: {
@@ -161,6 +161,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden
           dark:bg-darkTheme dark:text-white min-h-screen`}
       >

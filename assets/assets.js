@@ -320,7 +320,7 @@ export const blogPosts = [
 // Image metadata for SEO and accessibility (can be used in components)
 export const imageMetadata = {
   profile: {
-    alt: 'Dharma Teja Bandaru - Backend Engineer & AI Developer',
+    alt: 'Dharma Teja Bandaru - Sr.Software Engineer - Gen AI',
     title: 'Dharma Teja Bandaru Profile',
   },
   tools: {

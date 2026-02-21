@@ -26,19 +26,6 @@ export async function disableAnimations(page) {
 }
 
 /**
- * Sets dark mode by matching the app's localStorage-based toggle pattern.
- */
-export async function setDarkMode(page) {
-  await page.evaluate(() => {
-    localStorage.setItem('theme', 'dark');
-    document.body.classList.add('dark');
-    document.documentElement.style.setProperty('color-scheme', 'dark');
-  });
-  await page.emulateMedia({ colorScheme: 'dark' });
-  await page.waitForTimeout(300);
-}
-
-/**
  * Sets light mode.
  */
 export async function setLightMode(page) {
@@ -49,14 +36,6 @@ export async function setLightMode(page) {
   });
   await page.emulateMedia({ colorScheme: 'light' });
   await page.waitForTimeout(300);
-}
-
-/**
- * Scrolls to trigger the Navbar glassmorphism effect (appears at scrollY > 50).
- */
-export async function triggerNavbarScroll(page) {
-  await page.evaluate(() => window.scrollTo(0, 100));
-  await page.waitForTimeout(200);
 }
 
 /**
