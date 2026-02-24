@@ -46,9 +46,9 @@ const About = ({ isDarkMode }) => {
           <div className="flex-1">
             <ul className="mb-10 max-w-2xl font-Ovo list-disc pl-5" role="list">
               <li>
-                Based in St. Louis, MO - the Arch City, where I build and
-                enhance Gen-AI agents, RAG applications, and actively experiment
-                with Agentic AI and Model Context Protocol (MCP).
+                At work, I build and enhance Gen-AI agents, RAG applications,
+                and actively experiment with Agentic AI and Model Context
+                Protocol (MCP).
               </li>
               <li>
                 Primarily a backend engineer with expertise in designing,

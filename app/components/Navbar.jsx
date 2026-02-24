@@ -99,6 +99,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Investment Thesis
             </Link>
           </li>
+
+          <li>
+            <Link
+              className="font-Ovo hover:underline"
+              href="/software-engineering"
+            >
+              Software Engineering
+            </Link>
+          </li>
         </ul>
 
         <div className="flex items-center gap-4">
@@ -168,16 +177,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Home
             </a>
           </li>
-          <li role="none">
-            <Link
-              className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
-              onClick={closeMenu}
-              href="/book-summaries"
-              role="menuitem"
-            >
-              Book Summaries
-            </Link>
-          </li>
+
           <li role="none">
             <a
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -192,10 +192,30 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             <Link
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={closeMenu}
+              href="/book-summaries"
+              role="menuitem"
+            >
+              Book Summaries
+            </Link>
+          </li>
+          <li role="none">
+            <Link
+              className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={closeMenu}
               href="/investment-thesis"
               role="menuitem"
             >
               Investment Thesis
+            </Link>
+          </li>
+          <li role="none">
+            <Link
+              className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={closeMenu}
+              href="/software-engineering"
+              role="menuitem"
+            >
+              Software Engineering
             </Link>
           </li>
           {/* <li role="none">

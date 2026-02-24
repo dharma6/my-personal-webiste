@@ -51,6 +51,9 @@ import vscode from './vscode.png';
 import web_icon from './web-icon.png';
 import wiz_icon from './wiz.png';
 
+// Engineering blog post content (each post's markdown lives in its own file)
+import awsConcurrencyNotes from '@/content/engineering/aws-concurrency-notes';
+
 // Original assets object with added alt text metadata
 export const assets = {
   user_image,
@@ -314,6 +317,22 @@ export const blogPosts = [
       'Four lessons I trust and my journey into investing — from random Robinhood trades to a repeatable options strategy.',
     date: '2026-02-17',
     tags: ['investing', 'options', 'lessons'],
+  },
+];
+
+// Software Engineering Blog Posts
+// Content lives in separate files under /content/engineering/
+// To add a new post: 1) create a .js file in /content/engineering/ that exports the markdown
+//                     2) import it here and add an entry to this array
+export const engineeringPosts = [
+  {
+    slug: 'aws-concurrency-notes',
+    title: 'Lambda, S3, API Gateway & ECS — My Notes on Concurrent Traffic',
+    excerpt:
+      'Personal notes from working through concurrency and scaling questions on AWS — Lambda limits, S3 concurrent writes, API Gateway throttling, and ECS load balancing.',
+    date: '2026-02-22',
+    tags: ['aws', 'lambda', 'ecs', 'scaling'],
+    content: awsConcurrencyNotes,
   },
 ];
 
