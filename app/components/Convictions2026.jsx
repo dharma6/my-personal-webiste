@@ -98,7 +98,10 @@ const convictions = [
       'Growth outlook: ~20% range.',
       '~$613M total share repurchases since inception ($400M + $200M additional authorization).',
     ],
-    risks: ['Competitive restaurant tech market.', 'Macro sensitivity in hospitality industry.'],
+    risks: [
+      'Competitive restaurant tech market.',
+      'Macro sensitivity in hospitality industry.',
+    ],
     allocation: 'Planning up to ~1% (with 0.5% buffer for dips)',
   },
   {
@@ -140,7 +143,8 @@ const convictions = [
       'Currently trading like a growth + value hybrid.',
     ],
     risks: ['PEG varies depending on GAAP vs non-GAAP earnings adjustments.'],
-    allocation: 'Planned up to ~4% via recurring investment (currently targeting ~3.5–4%)',
+    allocation:
+      'Planned up to ~4% via recurring investment (currently targeting ~3.5–4%)',
   },
 ];
 
@@ -208,7 +212,9 @@ const ConvictionCard = ({ conviction }) => (
       </div>
       {conviction.allocation && (
         <div className="text-right">
-          <p className="text-xs text-gray-500 dark:text-white/40 font-Ovo mb-0.5">Allocation</p>
+          <p className="text-xs text-gray-500 dark:text-white/40 font-Ovo mb-0.5">
+            Allocation
+          </p>
           <p className="text-sm font-medium text-gray-700 dark:text-white/80 font-Ovo">
             {conviction.allocation}
           </p>
@@ -226,7 +232,10 @@ const ConvictionCard = ({ conviction }) => (
       </h4>
       <ul className="space-y-1.5">
         {conviction.bullets.map((b, i) => (
-          <li key={i} className="flex gap-2 text-sm text-gray-600 dark:text-white/70 font-Ovo">
+          <li
+            key={i}
+            className="flex gap-2 text-sm text-gray-600 dark:text-white/70 font-Ovo"
+          >
             <span className="text-green-500 mt-0.5 flex-shrink-0">›</span>
             <span>{b}</span>
           </li>
@@ -241,7 +250,10 @@ const ConvictionCard = ({ conviction }) => (
         </h4>
         <ul className="space-y-1.5">
           {conviction.risks.map((r, i) => (
-            <li key={i} className="flex gap-2 text-sm text-gray-600 dark:text-white/70 font-Ovo">
+            <li
+              key={i}
+              className="flex gap-2 text-sm text-gray-600 dark:text-white/70 font-Ovo"
+            >
               <span className="text-amber-500 mt-0.5 flex-shrink-0">⚠</span>
               <span>{r}</span>
             </li>
@@ -265,7 +277,10 @@ const Convictions2026 = ({ isDarkMode }) => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://dharmabandaru.com/investment-thesis/my-2026-convictions" />
+        <meta
+          property="og:url"
+          content="https://dharmabandaru.com/investment-thesis/my-2026-convictions"
+        />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -299,8 +314,9 @@ const Convictions2026 = ({ isDarkMode }) => {
         {/* Disclaimer */}
         <div className="mb-10 p-4 rounded-lg bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-700/30 fade-in-section">
           <p className="text-sm text-amber-800 dark:text-amber-300 font-Ovo">
-            <strong>Disclosure:</strong> These are my personal investment research notes and opinions
-            shared with friends and family. This is not financial advice.
+            <strong>Disclosure:</strong> These are my personal investment
+            research notes and opinions shared with friends and family. This is
+            not financial advice.
           </p>
         </div>
 
@@ -333,11 +349,12 @@ const Convictions2026 = ({ isDarkMode }) => {
         {/* Core Convictions */}
         <div className="mb-16">
           <h2 className="text-2xl sm:text-3xl font-Ovo text-gray-800 dark:text-white mb-2 fade-in-section">
-            Core Convictions
+            2026 Convictions
           </h2>
           <p className="text-gray-500 dark:text-white/50 font-Ovo mb-8 fade-in-section">
-            All positions are near 52-week lows as of May 2026. Research compiled from earnings
-            calls, investor presentations, and podcasts.
+            Most of these positions are near 52-week lows as of May 2026.
+            Research compiled from earnings calls, investor presentations, and
+            podcasts.
           </p>
           <div className="space-y-6">
             {convictions.map((c) => (
@@ -361,14 +378,16 @@ const Convictions2026 = ({ isDarkMode }) => {
               {otherConvictions.broaderThesis.body}
             </p>
             <div className="flex flex-wrap gap-2">
-              {['Manufacturing', 'Food', 'Automotive', 'Pharma'].map((industry) => (
-                <span
-                  key={industry}
-                  className="text-xs px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 font-Ovo"
-                >
-                  {industry}
-                </span>
-              ))}
+              {['Manufacturing', 'Food', 'Automotive', 'Pharma'].map(
+                (industry) => (
+                  <span
+                    key={industry}
+                    className="text-xs px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 font-Ovo"
+                  >
+                    {industry}
+                  </span>
+                )
+              )}
             </div>
           </div>
 
@@ -379,7 +398,10 @@ const Convictions2026 = ({ isDarkMode }) => {
             </h3>
             <div className="grid sm:grid-cols-3 gap-4">
               {otherConvictions.consulting.map((c) => (
-                <div key={c.ticker} className="bg-gray-50 dark:bg-white/5 rounded-lg p-4">
+                <div
+                  key={c.ticker}
+                  className="bg-gray-50 dark:bg-white/5 rounded-lg p-4"
+                >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
                       {c.ticker}
@@ -388,10 +410,15 @@ const Convictions2026 = ({ isDarkMode }) => {
                   <p className="font-semibold text-gray-800 dark:text-white font-Ovo text-sm mb-1">
                     {c.name}
                   </p>
-                  <p className="text-xs text-gray-500 dark:text-white/40 font-Ovo mb-2">{c.tag}</p>
+                  <p className="text-xs text-gray-500 dark:text-white/40 font-Ovo mb-2">
+                    {c.tag}
+                  </p>
                   <ul className="space-y-1">
                     {c.bullets.map((b, i) => (
-                      <li key={i} className="flex gap-1.5 text-xs text-gray-600 dark:text-white/60 font-Ovo">
+                      <li
+                        key={i}
+                        className="flex gap-1.5 text-xs text-gray-600 dark:text-white/60 font-Ovo"
+                      >
                         <span className="text-green-500 flex-shrink-0">›</span>
                         {b}
                       </li>
@@ -409,7 +436,10 @@ const Convictions2026 = ({ isDarkMode }) => {
             </h3>
             <ul className="space-y-1.5">
               {otherConvictions.hubspot.bullets.map((b, i) => (
-                <li key={i} className="flex gap-2 text-sm text-gray-600 dark:text-white/70 font-Ovo">
+                <li
+                  key={i}
+                  className="flex gap-2 text-sm text-gray-600 dark:text-white/70 font-Ovo"
+                >
                   <span className="text-green-500 mt-0.5 flex-shrink-0">›</span>
                   {b}
                 </li>
@@ -440,21 +470,37 @@ const Convictions2026 = ({ isDarkMode }) => {
               </thead>
               <tbody className="divide-y divide-gray-100 dark:divide-white/5">
                 {[
-                  { name: 'GitLab', ticker: 'GTLB', alloc: '1.75% (max ~2.25%)' },
+                  {
+                    name: 'GitLab',
+                    ticker: 'GTLB',
+                    alloc: '1.75% (max ~2.25%)',
+                  },
                   { name: 'UiPath', ticker: 'PATH', alloc: '0.84% (max ~1%)' },
-                  { name: 'Klarna', ticker: 'KLAR', alloc: '1.3% (max ~2%) — naked call' },
-                  { name: 'Atlassian', ticker: 'TEAM', alloc: '3.91% (recurring $5/day)' },
+                  {
+                    name: 'Klarna',
+                    ticker: 'KLAR',
+                    alloc: '1.3% (max ~2%) — naked call',
+                  },
+                  {
+                    name: 'Atlassian',
+                    ticker: 'TEAM',
+                    alloc: '3.91% (recurring $5/day)',
+                  },
                   { name: 'Toast', ticker: 'TOST', alloc: 'Planning ~1%' },
                   { name: 'Uber', ticker: 'UBER', alloc: 'Planned ~4%' },
                 ].map((row) => (
                   <tr key={row.ticker}>
-                    <td className="py-2 pr-4 text-gray-700 dark:text-white/80">{row.name}</td>
+                    <td className="py-2 pr-4 text-gray-700 dark:text-white/80">
+                      {row.name}
+                    </td>
                     <td className="py-2 pr-4">
                       <span className="font-mono text-xs px-1.5 py-0.5 rounded bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white/60">
                         {row.ticker}
                       </span>
                     </td>
-                    <td className="py-2 text-gray-600 dark:text-white/70">{row.alloc}</td>
+                    <td className="py-2 text-gray-600 dark:text-white/70">
+                      {row.alloc}
+                    </td>
                   </tr>
                 ))}
               </tbody>
