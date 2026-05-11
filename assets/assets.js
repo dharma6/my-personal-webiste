@@ -296,18 +296,13 @@ export const investmentJourney = {
 // Blog Posts Data
 export const blogPosts = [
   {
-    slug: 'my-2026-holdings',
-    title: 'My 2026 Holdings',
-    excerpt: 'Portifolio overview based on the Transaction History',
-    date: '2025-02-21',
-    tags: ['portfolio', 'holdings'],
-  },
-  {
-    slug: 'my-2025-holdings',
-    title: 'My 2025 Holdings',
-    excerpt: 'Portifolio overview based on the Transaction History',
-    date: '2025-02-21',
-    tags: ['portfolio', 'holdings'],
+    slug: 'my-2026-convictions',
+    title: 'My 2026 Convictions',
+    subtitle: 'Personal Investment Research Notes',
+    excerpt:
+      'My 2026 research notes on GitLab, UiPath, Klarna, Toast, Atlassian, Uber, and a broader AI adoption thesis — all near 52-week lows as of May 2026.',
+    date: '2026-05-10',
+    tags: ['research', 'convictions', '2026'],
   },
   {
     slug: 'investment-thesis',

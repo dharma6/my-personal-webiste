@@ -85,7 +85,11 @@ export default function InvestmentThesisPage() {
         <title>Investment Thesis - Dharma Bandaru</title>
         <meta
           name="description"
-          content="Articles on investing, portfolio holdings, and lessons learned from the market."
+          content="Personal investment research and conviction notes by Dharma Bandaru — covering GitLab, UiPath, Klarna, Toast, Atlassian, Uber, and lessons from the market."
+        />
+        <meta
+          name="keywords"
+          content="investment thesis, stock research, GitLab GTLB, UiPath PATH, Klarna, Toast TOST, Atlassian TEAM, Uber, 2026 convictions, SaaS investing"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content={isDarkMode ? '#1a1a1a' : '#ffffff'} />

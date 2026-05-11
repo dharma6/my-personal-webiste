@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import InvestmentThesis from '../../components/InvestmentThesis';
+import Convictions2026 from '../../components/Convictions2026';
 import Navbar from '../../components/Navbar';
 import { assets, blogPosts } from '@/assets/assets';
 
@@ -90,6 +91,47 @@ export default function ArticleContent({ slug }) {
         </main>
         <Footer isDarkMode={isDarkMode} />
       </div>
+    );
+  }
+
+  if (slug === 'my-2026-convictions') {
+    return (
+      <>
+        <Head>
+          <title>{post.title} - Dharma Bandaru</title>
+          <meta name="description" content={post.excerpt} />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="theme-color"
+            content={isDarkMode ? '#1a1a1a' : '#ffffff'}
+          />
+        </Head>
+
+        <div className="min-h-screen">
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black"
+          >
+            Skip to main content
+          </a>
+
+          <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+
+          <main id="main-content" className="pt-20">
+            <div className="w-full px-4 sm:px-10 lg:px-[12%] pt-6">
+              <Link
+                href="/investment-thesis"
+                className="inline-flex items-center text-sm text-gray-500 dark:text-white/50 hover:text-green-600 dark:hover:text-green-400 font-Ovo transition-colors"
+              >
+                &larr; Back to articles
+              </Link>
+            </div>
+            <Convictions2026 isDarkMode={isDarkMode} />
+          </main>
+
+          <Footer isDarkMode={isDarkMode} />
+        </div>
+      </>
     );
   }
 
