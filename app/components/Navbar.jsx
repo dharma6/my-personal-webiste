@@ -65,7 +65,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </Link>
 
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
+          className={`hidden lg:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
             ${
               isScroll
                 ? ''
@@ -74,26 +74,26 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           role="list"
         >
           <li>
-            <Link className="font-Ovo hover:underline" href="/#top">
+            <Link className="font-Ovo font-semibold hover:underline" href="/#top">
               Home
             </Link>
           </li>
 
           <li>
-            <Link className="font-Ovo hover:underline" href="/#about">
+            <Link className="font-Ovo font-semibold hover:underline" href="/#about">
               Professional Profile
             </Link>
           </li>
 
           <li>
-            <Link className="font-Ovo hover:underline" href="/book-summaries">
+            <Link className="font-Ovo font-semibold hover:underline" href="/book-summaries">
               Book Summaries
             </Link>
           </li>
 
           <li>
             <Link
-              className="font-Ovo hover:underline"
+              className="font-Ovo font-semibold hover:underline"
               href="/investment-thesis"
             >
               Investment Thesis
@@ -102,7 +102,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
           <li>
             <Link
-              className="font-Ovo hover:underline"
+              className="font-Ovo font-semibold hover:underline"
               href="/software-engineering"
             >
               Software Engineering
@@ -127,7 +127,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </button>
 
           <button
-            className="block md:hidden ml-3 p-2"
+            className="block lg:hidden ml-3 p-2"
             onClick={openMenu}
             aria-label="Open menu"
             aria-expanded={isMenuOpen}
@@ -147,7 +147,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <ul
           id="mobile-menu"
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20
+          className="flex lg:hidden flex-col gap-4 py-20
             px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50
             transition duration-500 dark:bg-darkHover dark:text-white"
           role="menu"
