@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 const securityHeaders = [
   {
-    key: 'Content-Security-Policy',
-    value:
-      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; connect-src 'self' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; frame-src https:;",
-  },
-  {
     key: 'X-Frame-Options',
     value: 'SAMEORIGIN',
   },
