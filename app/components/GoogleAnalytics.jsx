@@ -2,9 +2,9 @@
 
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 
-export default function GoogleAnalytics({ measurementId }) {
+function PageViewTracker({ measurementId }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -14,6 +14,10 @@ export default function GoogleAnalytics({ measurementId }) {
     window.gtag('config', measurementId, { page_path: url });
   }, [pathname, searchParams, measurementId]);
 
+  return null;
+}
+
+export default function GoogleAnalytics({ measurementId }) {
   if (!measurementId) return null;
 
   return (
@@ -34,6 +38,9 @@ export default function GoogleAnalytics({ measurementId }) {
           `,
         }}
       />
+      <Suspense fallback={null}>
+        <PageViewTracker measurementId={measurementId} />
+      </Suspense>
     </>
   );
 }
