@@ -1,5 +1,6 @@
 import { Outfit, Ovo } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import Lilly from './components/Lilly';
 import './globals.css';
@@ -172,6 +173,7 @@ export default function RootLayout({ children }) {
         {children}
         <Lilly />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
