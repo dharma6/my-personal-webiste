@@ -1,5 +1,6 @@
 import { Outfit, Ovo } from 'next/font/google';
 import GoogleAnalytics from './components/GoogleAnalytics';
+import Lilly from './components/Lilly';
 import './globals.css';
 
 const outfit = Outfit({
@@ -169,6 +170,7 @@ export default function RootLayout({ children }) {
           measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
         />
         {children}
+        <Lilly />
       </body>
     </html>
   );

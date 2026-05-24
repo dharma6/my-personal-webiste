@@ -74,15 +74,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           role="list"
         >
           <li>
-            <a className="font-Ovo hover:underline" href="/#top">
+            <Link className="font-Ovo hover:underline" href="/#top">
               Home
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a className="font-Ovo hover:underline" href="/#about">
+            <Link className="font-Ovo hover:underline" href="/#about">
               Professional Profile
-            </a>
+            </Link>
           </li>
 
           <li>
@@ -168,25 +168,25 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             />
           </button>
           <li role="none">
-            <a
+            <Link
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={closeMenu}
               href="/#top"
               role="menuitem"
             >
               Home
-            </a>
+            </Link>
           </li>
 
           <li role="none">
-            <a
+            <Link
               className="font-Ovo block w-full py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={closeMenu}
               href="/#about"
               role="menuitem"
             >
               Professional Profile
-            </a>
+            </Link>
           </li>
           <li role="none">
             <Link
