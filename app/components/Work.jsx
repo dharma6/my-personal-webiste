@@ -1,4 +1,5 @@
 import { assets, workData } from '@/assets/assets';
+import { currentlyReading, enjoyedBooks } from '@/lib/books';
 import Image from 'next/image';
 
 // Metadata for the Work page
@@ -97,7 +98,7 @@ const Work = () => {
               style={{ backgroundImage: `url(${project.bgImage})` }}
               role="button"
               tabIndex={0}
-              onKeyPress={(e) => {
+              onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   handleCardClick(project.pdfUrl);
                 }
@@ -129,6 +130,82 @@ const Work = () => {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 my-16 fade-in-section">
+          <div className="flex-1 h-px bg-gray-200 dark:bg-white/10" />
+          <span className="text-xs font-Ovo text-gray-400 dark:text-white/30 tracking-widest uppercase">
+            More on the shelf
+          </span>
+          <div className="flex-1 h-px bg-gray-200 dark:bg-white/10" />
+        </div>
+
+        {/* Currently Reading */}
+        <div className="mb-14 fade-in-section">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+            </span>
+            <h3 className="text-sm font-semibold font-Ovo tracking-widest uppercase text-gray-500 dark:text-white/40">
+              Currently Reading
+            </h3>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {currentlyReading.map((book, i) => (
+              <div
+                key={i}
+                className="group relative rounded-xl border border-green-200 dark:border-green-900/40 bg-green-50/50 dark:bg-green-900/10 p-5 overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 rounded-bl-full bg-green-100/60 dark:bg-green-900/20 -mr-6 -mt-6" />
+                <p className="text-[10px] font-mono font-semibold text-green-600 dark:text-green-500 tracking-widest uppercase mb-2">
+                  In Progress
+                </p>
+                <h4 className="text-lg font-semibold font-Ovo text-gray-800 dark:text-white mb-0.5">
+                  {book.title}
+                </h4>
+                <p className="text-sm font-Ovo text-gray-500 dark:text-white/40 mb-3">
+                  {book.author}
+                </p>
+                <p className="text-xs font-Ovo text-gray-500 dark:text-white/50 leading-relaxed">
+                  {book.note}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Books I Enjoyed */}
+        <div className="fade-in-section">
+          <div className="flex items-baseline justify-between mb-8">
+            <h3 className="text-2xl font-Ovo text-gray-800 dark:text-white">
+              Books I&rsquo;ve Enjoyed
+            </h3>
+            <span className="text-xs font-Ovo text-gray-400 dark:text-white/30">
+              No summaries — just worth reading
+            </span>
+          </div>
+          <div className="space-y-0 divide-y divide-gray-100 dark:divide-white/5">
+            {enjoyedBooks.map((book) => (
+              <div
+                key={book.title}
+                className="group flex items-center gap-5 py-4 hover:bg-gray-50 dark:hover:bg-white/[0.02] -mx-4 px-4 transition-colors rounded-lg cursor-default"
+              >
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold font-Ovo text-gray-800 dark:text-white text-sm sm:text-base leading-snug">
+                    {book.title}
+                  </p>
+                  <p className={`text-xs font-Ovo mt-0.5 ${book.note ? 'italic text-gray-400 dark:text-white/30' : 'text-gray-400 dark:text-white/40'}`}>
+                    {book.author}
+                  </p>
+                </div>
+                <span className="shrink-0 text-xs font-Ovo text-gray-400 dark:text-white/30 bg-gray-100 dark:bg-white/5 px-2 py-0.5 rounded-full hidden sm:inline-block">
+                  {book.tag}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>

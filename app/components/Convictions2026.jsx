@@ -1,7 +1,7 @@
 'use client';
 
-import Head from 'next/head';
 import { convictions, otherConvictions } from '@/lib/convictions';
+import Head from 'next/head';
 
 const ConvictionCard = ({ conviction }) => (
   <div className="border border-gray-200 dark:border-white/10 rounded-xl p-6 sm:p-8 fade-in-section">
@@ -107,7 +107,7 @@ const Convictions2026 = ({ isDarkMode }) => {
                 url: 'https://dharmabandaru.com',
               },
               datePublished: '2026-05-10',
-              dateModified: '2026-05-10',
+              dateModified: '2026-05-26',
               url: 'https://dharmabandaru.com/investment-thesis/my-2026-convictions',
               keywords:
                 'GitLab, UiPath, Klarna, Toast, Atlassian, Uber, investment thesis 2026, SaaS stocks, value investing, stock research',
@@ -135,7 +135,7 @@ const Convictions2026 = ({ isDarkMode }) => {
             href="/Convictions -2026-Edited.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-white/10 text-sm font-Ovo text-gray-700 dark:text-white/70 hover:border-green-400 dark:hover:border-green-500 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-green-400 dark:border-green-500 bg-green-50 dark:bg-green-900/20 text-sm font-Ovo font-medium text-green-700 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/30 hover:border-green-500 dark:hover:border-green-400 transition-colors shadow-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -151,15 +151,48 @@ const Convictions2026 = ({ isDarkMode }) => {
                 d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"
               />
             </svg>
-            Download original research PDF
+            <strong>Download original research PDF</strong>
           </a>
         </div>
 
         {/* Core Convictions */}
         <div className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-Ovo text-gray-800 dark:text-white mb-2 fade-in-section">
-            2026 Convictions
-          </h2>
+          <div className="mb-6 fade-in-section">
+            <h2 className="text-2xl sm:text-3xl font-Ovo text-gray-800 dark:text-white mb-4">
+              2026 Convictions
+            </h2>
+            {/* Changelog */}
+            <div className="inline-block rounded-lg border border-gray-200 dark:border-white/10 overflow-hidden text-xs font-Ovo">
+              <div className="grid grid-cols-[auto_auto_1fr] divide-y divide-gray-100 dark:divide-white/5">
+                <div className="contents">
+                  <span className="px-3 py-2 text-gray-400 dark:text-white/30 border-r border-gray-100 dark:border-white/5 whitespace-nowrap">
+                    May 10, 2026
+                  </span>
+                  <span className="px-3 py-2 border-r border-gray-100 dark:border-white/5">
+                    <span className="px-1.5 py-0.5 rounded bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 font-medium">
+                      Published
+                    </span>
+                  </span>
+                  <span className="px-3 py-2 text-gray-600 dark:text-white/60">
+                    Version 1
+                  </span>
+                </div>
+                <div className="contents">
+                  <span className="px-3 py-2 text-gray-400 dark:text-white/30 border-r border-gray-100 dark:border-white/5 whitespace-nowrap">
+                    May 26, 2026
+                  </span>
+                  <span className="px-3 py-2 border-r border-gray-100 dark:border-white/5">
+                    <span className="px-1.5 py-0.5 rounded bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400 font-medium">
+                      Added
+                    </span>
+                  </span>
+                  <span className="px-3 py-2 text-gray-600 dark:text-white/60">
+                    Added Microsoft
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
           <p className="text-gray-500 dark:text-white/50 font-Ovo mb-8 fade-in-section">
             Most of these positions are near 52-week lows as of May 2026.
             Research compiled from earnings calls, investor presentations, and
@@ -297,6 +330,7 @@ const Convictions2026 = ({ isDarkMode }) => {
                   },
                   { name: 'Toast', ticker: 'TOST', alloc: 'Planning ~1%' },
                   { name: 'Uber', ticker: 'UBER', alloc: 'Planned ~4%' },
+                  { name: 'Microsoft', ticker: 'MSFT', alloc: 'Planned ~4%' },
                 ].map((row) => (
                   <tr key={row.ticker}>
                     <td className="py-2 pr-4 text-gray-700 dark:text-white/80">

@@ -115,7 +115,7 @@ export const workData = [
   {
     title: 'Good To Great',
     description: 'By Jim Collins',
-    bgImage: 'g2g.webp',
+    bgImage: '/g2g.webp',
     pdfUrl:
       'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/GoodToGreat.pdf',
     altText: 'Good to Great by Jim Collins - Leadership Book Summary',
@@ -123,7 +123,7 @@ export const workData = [
   {
     title: 'Atomic Habits',
     description: 'By James Clear',
-    bgImage: 'atomic-habits.webp',
+    bgImage: '/atomic-habits.webp',
     pdfUrl:
       'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/AtomicHabits.pdf',
     altText: 'Atomic Habits by James Clear - Personal Development Book Summary',
@@ -131,7 +131,7 @@ export const workData = [
   {
     title: 'Dopamine Nation',
     description: 'By Anna Lembke',
-    bgImage: 'dopamine-nation.webp',
+    bgImage: '/dopamine-nation.webp',
     pdfUrl:
       'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/DopmaineNation.pdf',
     altText: 'Dopamine Nation by Anna Lembke - Neuroscience Book Summary',
@@ -139,7 +139,7 @@ export const workData = [
   {
     title: 'Culture PlayBook',
     description: 'By Daniel Coyle',
-    bgImage: 'culture-play.webp',
+    bgImage: '/culture-play.webp',
     pdfUrl:
       'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/CulturePlayBook.pdf',
     altText:
@@ -148,7 +148,7 @@ export const workData = [
   {
     title: 'Focus',
     description: 'Dr Hubberman podcast',
-    bgImage: 'focus.webp',
+    bgImage: '/focus.webp',
     pdfUrl:
       'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/FocusAndConcentration.pdf',
     altText: 'Focus and Concentration - Huberman Lab Podcast Summary',
@@ -157,7 +157,7 @@ export const workData = [
   {
     title: 'Magic of Thinking Big',
     description: 'David J. Schwartz',
-    bgImage: 'think-big.webp',
+    bgImage: '/think-big.webp',
     pdfUrl:
       'https://dharma-portfolio-pdfs.s3.us-east-1.amazonaws.com/Magic-of-thinking-big.pdf',
     altText: 'ThinkBig - Summary',

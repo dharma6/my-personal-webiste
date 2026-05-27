@@ -1,8 +1,27 @@
+import { currentlyReading, enjoyedBooks } from '@/lib/books';
 import { convictions, otherConvictions } from '@/lib/convictions';
 import { logConversation } from '@/lib/sheets';
 import Anthropic from '@anthropic-ai/sdk';
 
 const client = new Anthropic();
+
+function buildBookContext() {
+  const lines = [];
+
+  lines.push('Other books Dharma has enjoyed reading (no formal summaries, but genuinely loved):');
+  for (const b of enjoyedBooks) {
+    const label = b.note ? `${b.title} — ${b.author}` : `${b.title} — ${b.author}`;
+    lines.push(`- ${label} (${b.tag})`);
+  }
+
+  lines.push('');
+  lines.push('Books Dharma is currently reading:');
+  for (const b of currentlyReading) {
+    lines.push(`- ${b.title} — ${b.author} (${b.note})`);
+  }
+
+  return lines.join('\n');
+}
 
 function buildInvestmentContext() {
   const lines = [];
@@ -69,6 +88,8 @@ Dharma reads extensively and writes summaries of books he finds impactful. His r
 - Focus — based on Dr. Huberman's podcast (focus, concentration, and performance)
 - Magic of Thinking Big — David J. Schwartz (mindset and ambition)
 All summaries are available as PDFs on the site.
+
+${buildBookContext()}
 
 --- SOFTWARE ENGINEERING ---
 Dharma writes technical notes on the Software Engineering section — personal documentation he keeps for reference, shared publicly in case others find it useful. Current posts:
