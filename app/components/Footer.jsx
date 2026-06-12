@@ -32,7 +32,11 @@ const Footer = ({ isDarkMode }) => {
         </div>
       </div>
 
-      <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+      <p className="text-center text-xs text-gray-400 dark:text-gray-500 mt-12 mb-4">
+        Built with Next.js · Tailwind CSS · Deployed on Vercel
+      </p>
+
+      <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] py-6">
         <p>
           <small>© {currentYear} Dharma Bandaru. All rights reserved</small>
         </p>
