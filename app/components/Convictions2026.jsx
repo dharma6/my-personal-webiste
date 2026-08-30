@@ -35,6 +35,12 @@ const ConvictionCard = ({ conviction }) => (
       {conviction.summary}
     </p>
 
+    {conviction.statusNote && (
+      <p className="text-xs font-Ovo mb-4 px-3 py-2 rounded-md bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-white/60 border border-gray-200 dark:border-white/10">
+        <strong>Update:</strong> {conviction.statusNote}
+      </p>
+    )}
+
     <div className="mb-4">
       <h4 className="text-sm font-semibold text-gray-500 dark:text-white/50 uppercase tracking-wide mb-2 font-Ovo">
         Key Highlights
@@ -107,7 +113,7 @@ const Convictions2026 = ({ isDarkMode }) => {
                 url: 'https://dharmabandaru.com',
               },
               datePublished: '2026-05-10',
-              dateModified: '2026-05-26',
+              dateModified: '2026-08-30',
               url: 'https://dharmabandaru.com/investment-thesis/my-2026-convictions',
               keywords:
                 'GitLab, UiPath, Klarna, Toast, Atlassian, Uber, investment thesis 2026, SaaS stocks, value investing, stock research',
@@ -188,6 +194,22 @@ const Convictions2026 = ({ isDarkMode }) => {
                   </span>
                   <span className="px-3 py-2 text-gray-600 dark:text-white/60">
                     Added Microsoft
+                  </span>
+                </div>
+                <div className="contents">
+                  <span className="px-3 py-2 text-gray-400 dark:text-white/30 border-r border-gray-100 dark:border-white/5 whitespace-nowrap">
+                    Aug 30, 2026
+                  </span>
+                  <span className="px-3 py-2 border-r border-gray-100 dark:border-white/5">
+                    <span className="px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 font-medium">
+                      Updated
+                    </span>
+                  </span>
+                  <span className="px-3 py-2 text-gray-600 dark:text-white/60">
+                    Exited GitLab & UiPath (profit); accumulating Klarna;
+                    covered calls on Atlassian ($250, Jan 2028) &amp; Toast
+                    ($40); long-term bullish Uber; Microsoft now ~8%; added
+                    bonds (JAAA, SGOV)
                   </span>
                 </div>
               </div>
@@ -272,7 +294,7 @@ const Convictions2026 = ({ isDarkMode }) => {
           </div>
 
           {/* HubSpot */}
-          <div className="border border-gray-200 dark:border-white/10 rounded-xl p-6 sm:p-8">
+          <div className="border border-gray-200 dark:border-white/10 rounded-xl p-6 sm:p-8 mb-6">
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white font-Ovo mb-3">
               {otherConvictions.hubspot.title}
             </h3>
@@ -287,6 +309,31 @@ const Convictions2026 = ({ isDarkMode }) => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Bonds */}
+          <div className="border border-gray-200 dark:border-white/10 rounded-xl p-6 sm:p-8">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white font-Ovo mb-3">
+              {otherConvictions.bonds.title}
+            </h3>
+            <p className="text-gray-600 dark:text-white/70 font-Ovo leading-relaxed text-sm sm:text-base mb-4">
+              {otherConvictions.bonds.body}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {otherConvictions.bonds.items.map((item) => (
+                <div
+                  key={item.ticker}
+                  className="flex items-center gap-2 bg-gray-50 dark:bg-white/5 rounded-lg px-4 py-2"
+                >
+                  <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
+                    {item.ticker}
+                  </span>
+                  <span className="text-sm text-gray-600 dark:text-white/70 font-Ovo">
+                    {item.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -315,22 +362,36 @@ const Convictions2026 = ({ isDarkMode }) => {
                   {
                     name: 'GitLab',
                     ticker: 'GTLB',
-                    alloc: '1.75% (max ~2.25%)',
+                    alloc: 'Exited with profit',
                   },
-                  { name: 'UiPath', ticker: 'PATH', alloc: '0.84% (max ~1%)' },
+                  {
+                    name: 'UiPath',
+                    ticker: 'PATH',
+                    alloc: 'Exited with profit',
+                  },
                   {
                     name: 'Klarna',
                     ticker: 'KLAR',
-                    alloc: '1.3% (max ~2%) — naked call',
+                    alloc: 'Accumulating (target ~4%)',
                   },
                   {
                     name: 'Atlassian',
                     ticker: 'TEAM',
-                    alloc: '3.91% (recurring $5/day)',
+                    alloc: 'Covered call $250, Jan 2028',
                   },
-                  { name: 'Toast', ticker: 'TOST', alloc: 'Planning ~1%' },
-                  { name: 'Uber', ticker: 'UBER', alloc: 'Planned ~4%' },
-                  { name: 'Microsoft', ticker: 'MSFT', alloc: 'Planned ~4%' },
+                  {
+                    name: 'Toast',
+                    ticker: 'TOST',
+                    alloc: 'Covered call $40',
+                  },
+                  {
+                    name: 'Uber',
+                    ticker: 'UBER',
+                    alloc: 'Long-term bullish — planned ~8%',
+                  },
+                  { name: 'Microsoft', ticker: 'MSFT', alloc: '~8% (current)' },
+                  { name: 'Bonds', ticker: 'JAAA', alloc: 'New position' },
+                  { name: 'Bonds', ticker: 'SGOV', alloc: 'New position' },
                 ].map((row) => (
                   <tr key={row.ticker}>
                     <td className="py-2 pr-4 text-gray-700 dark:text-white/80">
