@@ -1,5 +1,5 @@
 import { currentlyReading, enjoyedBooks } from '@/lib/books';
-import { convictions, otherConvictions } from '@/lib/convictions';
+import { convictions } from '@/lib/convictions';
 import { logConversation } from '@/lib/sheets';
 import Anthropic from '@anthropic-ai/sdk';
 
@@ -38,21 +38,6 @@ function buildInvestmentContext() {
     if (c.allocation) lines.push(`  Allocation: ${c.allocation}`);
     lines.push('');
   }
-
-  lines.push('Broader thesis — AI Adoption in Traditional Industries:');
-  lines.push(`  ${otherConvictions.broaderThesis.body}`);
-  lines.push('');
-
-  lines.push(
-    'Consulting exposure (play on AI adoption in traditional industries):'
-  );
-  for (const c of otherConvictions.consulting) {
-    lines.push(`  ${c.name} (${c.ticker}): ${c.bullets.join(' | ')}`);
-  }
-  lines.push('');
-
-  lines.push('HubSpot (watching):');
-  lines.push(`  ${otherConvictions.hubspot.bullets.join(' | ')}`);
 
   return lines.join('\n');
 }

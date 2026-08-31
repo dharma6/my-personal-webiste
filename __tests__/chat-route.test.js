@@ -31,9 +31,7 @@ vi.mock('@/lib/convictions', () => ({
     },
   ],
   otherConvictions: {
-    broaderThesis: { body: 'AI is transforming traditional industries.' },
-    consulting: [{ name: 'Accenture', ticker: 'ACN', bullets: ['consulting exposure'] }],
-    hubspot: { bullets: ['SMB-focused CRM'] },
+    bonds: { title: 'Bonds', items: [{ ticker: 'JAAA', name: 'Janus Henderson AAA CLO ETF' }] },
   },
 }));
 
